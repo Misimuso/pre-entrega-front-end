@@ -13,7 +13,6 @@
     font-family: "Spartan", sans-serif;
 }
 
-/* Tipografía base */
 h1 {
     font-size: 50px;
     line-height: 64px;
@@ -52,10 +51,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
+    padding: 10px 10px;
     background-color: #000000;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    /* El header queda fijo en la parte superior al hacer scroll */
     z-index: 999;
     position: sticky;
     top: 0px;
@@ -65,6 +62,7 @@ body {
 .header img{
     width: 65px;
     height: 65px;
+
 }
 
 .navbar {
@@ -80,11 +78,216 @@ body {
 
 .navbar a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #ffe5b9;
+    text-shadow: 
+    0 0 7px #FFF694,
+    0 0 10px #E9E187,
+    0 0 21px #D9D17E,
+    0 0 42px #CBC476,
+    0 0 92px #BAB46C;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
 .navbar a:hover {
-    color: #088178;
+    color: #22ffe4;
+    text-shadow: 
+    0 0 7px #22FFE4,
+    0 0 10px #1FECD3,
+    0 0 21px #1CD5BF,
+    0 0 42px #19C1AD,
+    0 0 92px #16AA99;
+}
+
+.hero {
+    background-image: url('./img/White_Nights_and_Dark_Days.webp');
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 95vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 5% center;
+    padding: 0 80px;
+}
+
+.hero .hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    z-index: 1;
+}
+
+.hero .hero-content h4 {
+    color: #fcfcfc;
+    text-shadow: 
+    0 0 7px #9aebeb,
+    0 0 10px #b9f0f0,
+    0 0 21px #00ffff,
+    0 0 42px #00bfff,
+    0 0 92px #00bfff;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.hero .hero-content h2 {
+    color: #fcfcfc;
+    text-shadow: 
+    0 0 7px #9aebeb,
+    0 0 10px #b9f0f0,
+    0 0 21px #00ffff,
+    0 0 42px #00bfff,
+    0 0 92px #00bfff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero .hero-content h1 {
+    color: #fcfcfc;
+    text-shadow: 
+    0 0 7px #9aebeb,
+    0 0 10px #b9f0f0,
+    0 0 21px #00ffff,
+    0 0 42px #00bfff,
+    0 0 92px #00bfff;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero .hero-content p {
+    color: #fcfcfc;
+    text-shadow: 
+    0 0 7px #9aebeb,
+    0 0 10px #b9f0f0,
+    0 0 21px #00ffff,
+    0 0 42px #00bfff,
+    0 0 92px #00bfff;
+    margin-bottom: 20px;
+}
+
+.hero .hero-content button {
+    background-color: #000000;
+    color: #ffe5b9;
+    text-shadow: 
+    0 0 7px #FFF694,
+    0 0 10px #E9E187,
+    0 0 21px #D9D17E,
+    0 0 42px #CBC476,
+    0 0 92px #BAB46C;
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+.hero .hero-content button:hover {
+    color: #22ffe4;
+    text-shadow: 
+    0 0 7px #22FFE4,
+    0 0 10px #1FECD3,
+    0 0 21px #1CD5BF,
+    0 0 42px #19C1AD,
+    0 0 92px #16AA99;
+}
+
+/* Responsive Hero*/
+@media(max-width: 1200px) {
+    .hero {
+        padding: 0 60px;
+    }
+
+    .hero .hero-content {
+        width: 55%;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        height: 85vh;
+        padding: 0 60px;
+    }
+
+    .hero .hero-content {
+        width: 60%;
+    }
+
+    .hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        padding: 0 40px;
+        justify-content: center;
+        background-position: top center;
+    }
+
+    .hero .hero-content{
+        width: 80%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero .hero-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .hero .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .hero{
+        height: 60vh;
+        padding: 0 20px;
+        background-position: 55% center;
+    }
+
+    .hero .hero-content {
+        width: 100%;
+    }
+
+    .hero .hero-content h4 {
+        font-size: 0.8rem;
+    }
+
+    .hero .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero .hero-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .hero .hero-content p {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    .hero .hero-content button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
 }
