@@ -100,7 +100,7 @@ body {
     0 0 92px #16AA99;
 }
 
-.hero {
+body.index .hero {
     background-image: url('./img/White_Nights_and_Dark_Days.webp');
     display: flex;
     justify-content: flex-end;
@@ -290,4 +290,16 @@ body {
         font-size: 0.9rem;
     }
 
+}
+
+body.login .hero {
+    background-image: url('./img/libreria.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 5% center;
+    padding: 0 80px;
 }
